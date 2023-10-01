@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <style>
+        .bg-primary{
+            background-color: brown;
+    
+        }
+    
+    </style>
+</head>
+<body>
+    <h1 class="conatiner">
+        javascript basics
+    </h1>
+    <div id="firstcontainer" class="container">
+        <button id="click" onclick="clicked()">click me</button>
+    </div>
+
+    <script>
+         //DOM manipulation
+        // let elem= document.getElementById('click');
+        // console.log(elem);
+
+        let elemclass= document.getElementsByClassName('conatiner')
+        console.log(elemclass);
+
+        // // elemclass[0].style.background = "yellow"
+        // elemclass[0].classList.add("bg-primary");
+        // elemclass[0].classList.remove("bg-primary");
+        // console.log(elem.innerHTML)
+        // console.log(elemclass[0].innerHTML)
+
+
+        tn= document.getElementsByTagName("button")
+        console.log(tn);
+
+        tnn= document.getElementsByTagName("div")
+        console.log(tnn)
+
+        createchild= document.createElement("p");
+        createchild.innertext= "this is a para";
+        elemclass[0].appendChild(createchild)
+
+        function clicked(){
+            console.log("the button was clicked");
+        }
+
+        window.onload = function(){
+            console.log("the document was loaded")
+        }
+       
+        firstcontainer.addEventlistener('click',function(){
+            console.log("clicked")
+        })
+        
+
+    </script>
+</body>
+</html>
